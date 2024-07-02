@@ -89,7 +89,7 @@ const Home = () => {
             <Typography variant="body1">Email</Typography>
           </Grid>
           <Grid item xs={3} sm={2} md={2} textAlign="center">
-            <IconButton color="primary" href="https://instagram.com/yourinstagramlink" target="_blank">
+            <IconButton color="primary" href="https://instagram.com/handmade_by_bhumi/?igsh=MWZ6d2R3NzZmanN5Yw%3D%3D" target="_blank">
               <Instagram style={{ fontSize: 40 }} />
             </IconButton>
             <Typography variant="body1">Instagram</Typography>
