@@ -1,0 +1,39 @@
+.about-us {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('path_to_hero_image') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 20px;
+  }
+  
+  .story-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .team-avatar {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .cta-section {
+    background: #f5f5f5;
+    padding: 50px 20px;
+    border-radius: 8px;
+  }
+  
+  .cta-section button {
+    margin-top: 20px;
+  }
+  
