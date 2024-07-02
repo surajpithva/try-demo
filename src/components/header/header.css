@@ -1,0 +1,29 @@
+@media (min-width: 900px) {
+        .css-1t6c9ts {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+
+.css-hip9hq-MuiPaper-root-MuiAppBar-root{
+    background-color: black !important;
+}
+
+.Text:hover{
+    font-size: larger !important;
+    color: #CDFF03 !important;
+    background-color: rgb(65, 80, 75) !important;
+}
+.Text{
+    font-size: large !important;
+}
+
+.logoImg{
+    height: auto;
+    width: 4%;
+    
+}
