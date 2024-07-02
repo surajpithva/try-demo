@@ -41,10 +41,10 @@ const AboutUs = () => {
             <GradientTypography variant="h4" gutterBottom>
               Our Story
             </GradientTypography>
-            <Typography variant="body1" paragraph>
+            <Typography variant="h5" paragraph>
               At Handmade Crafts, we believe in the beauty of unique, handcrafted items. Our journey started with a passion for creating beautiful, artisanal products that bring joy to our customers. Each piece is crafted with care, attention to detail, and a touch of love.
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="h5">
               From humble beginnings to a thriving business, our dedication to quality and craftsmanship has never wavered. Join us on our journey and discover the magic of handmade crafts.
             </Typography>
           </Grid>

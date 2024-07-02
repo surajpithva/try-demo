@@ -1,5 +1,10 @@
 .about-us {
-  font-family: 'Roboto', sans-serif;
+
+    font-family: "Playwrite US Modern", cursive;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+ 
 }
 
 .hero-section {
