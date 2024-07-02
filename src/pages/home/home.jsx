@@ -1,22 +1,40 @@
+import React, { useState, useEffect } from "react";
 import { Box, Button, Card, CardContent, CardMedia, Grid, IconButton, Typography } from "@mui/material";
-import React from "react";
-import "./home.css";
+import { ClipLoader } from "react-spinners";
 import cuteGirl from "../../assests/cuteGirl.png";
 import Header from "../../components/header/header";
 import { Email, Facebook, Instagram, WhatsApp } from "@mui/icons-material";
 import products from "../../json-data/servicesData/servicesData";
 import Testimonials from "../../components/testimonial/testimonial";
 import Footer from "../../components/footer/footer";
+import "./home.css";
 
 const Home = () => {
-  console.log(products);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="loader-container">
+        <ClipLoader size={150} color={"#333"} loading={loading} />
+      </div>
+    );
+  }
+
   return (
     <>
       {/* Header Start Here */}
       <Header />
       {/* Header End Here */}
 
-    
       {/* Classy Craft Start Here */}
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid
@@ -128,18 +146,13 @@ const Home = () => {
       </div>
       {/* Order Now End Here */}
 
-
       {/* Client Testimonial Start Here */}
-      <Testimonials/>
+      <Testimonials />
       {/* Client Testimonial End Here */}
+
       {/* Footer Start Here */}
-      <Footer/>
+      <Footer />
       {/* Footer End Here */}
-
-
-
-
-     
     </>
   );
 };

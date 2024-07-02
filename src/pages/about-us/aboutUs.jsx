@@ -28,7 +28,7 @@ const AboutUs = () => {
   return (
     <>
     <Header/>
-    <Container maxWidth="lg" className="about-us mt-3">
+    <Container maxWidth="lg" className="about-us">
       <Box className="hero-section" py={8} textAlign="center">
         <GradientTypography variant="h2" gutterBottom>
           About Us
