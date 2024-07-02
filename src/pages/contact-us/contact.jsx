@@ -57,8 +57,8 @@ const ContactUsPage = () => {
 
   return (
     <>
-      <Header />
-      <Container className="contact-container">
+      <Header  />
+      <Container className="contact-container mt-5">
         <Grid
           container
           spacing={3}

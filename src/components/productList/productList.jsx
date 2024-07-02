@@ -21,7 +21,7 @@ const ProductList = () => {
   return (
     <>
       <Header />
-      <Typography variant="h3" className="text-center">
+      <Typography variant="h3" className="text-center ">
         ALL PRODUCTS
       </Typography>
       {loading ? (

@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Dialog, DialogContent, DialogContentText, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import "./products.css";
+import './products.css';
 
 const ActionAreaCard = ({ image, name, description }) => {
   const [open, setOpen] = useState(false);
@@ -20,20 +20,20 @@ const ActionAreaCard = ({ image, name, description }) => {
 
   return (
     <>
-      <Card sx={{ maxWidth: 400 }} className='container mt-5'>
+      <Card  sx={{ maxWidth: 400, boxShadow: 3 }} className='container product-card '>
         <CardActionArea onClick={handleOpen}>
           <CardMedia
             component="img"
-            height="140"
+            height="200"
             image={image}
             alt={name}
             className='productImg'
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h5" component="div" className='product-name'>
               {name}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2" color="text.secondary" className='product-description'>
               {description}
             </Typography>
           </CardContent>
@@ -41,18 +41,18 @@ const ActionAreaCard = ({ image, name, description }) => {
       </Card>
 
       <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
-        <DialogContent>
+        <DialogContent className='dialog-content'>
           <IconButton
             edge="end"
             color="inherit"
             onClick={handleClose}
             aria-label="close"
-            style={{ position: 'absolute', right: 8, top: 8 }}
+            className='dialog-close-button'
           >
             <CloseIcon />
           </IconButton>
-          <img src={image} alt={name} style={{ width: '100%', height: 'auto' }} />
-          <DialogContentText>
+          <img src={image} alt={name} className='dialog-img' />
+          <DialogContentText className='dialog-text'>
             <Typography gutterBottom variant="h5" component="div">
               {name}
             </Typography>

@@ -9,7 +9,7 @@
     }
 
 
-.css-hip9hq-MuiPaper-root-MuiAppBar-root{
+.bhoomiCraftsNavbar{
     background-color: black !important;
 }
 
@@ -26,4 +26,8 @@
     height: auto;
     width: 4%;
     
+}
+
+.MuiButtonBase-root{
+    text-decoration: none !important;
 }

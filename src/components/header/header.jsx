@@ -43,7 +43,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" className='bhoomiCraftsNavbar' >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img src={logo} alt="logo" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} className='logoImg' />

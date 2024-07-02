@@ -77,7 +77,7 @@ const Home = () => {
             <Typography variant="body1">WhatsApp</Typography>
           </Grid>
           <Grid item xs={3} sm={2} md={2} textAlign="center">
-            <IconButton color="primary" href="https://facebook.com/yourfacebooklink" target="_blank">
+            <IconButton color="primary" href="https://www.facebook.com/handmade.bhumi?mibextid=ZbWKwL" target="_blank">
               <Facebook style={{ fontSize: 40 }} />
             </IconButton>
             <Typography variant="body1">Facebook</Typography>
