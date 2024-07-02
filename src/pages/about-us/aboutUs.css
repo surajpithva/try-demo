@@ -1,10 +1,11 @@
-.about-us {
 
-    font-family: "Playwrite US Modern", cursive;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
- 
+
+.our-story{
+  font-family: "Playwrite US Modern", cursive !important;
+    font-optical-sizing: auto !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+
 }
 
 .hero-section {
