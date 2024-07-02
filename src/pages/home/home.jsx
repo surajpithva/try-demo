@@ -83,7 +83,7 @@ const Home = () => {
             <Typography variant="body1">Facebook</Typography>
           </Grid>
           <Grid item xs={3} sm={2} md={2} textAlign="center">
-            <IconButton color="primary" href="mailto:youremail@example.com" target="_blank">
+            <IconButton color="primary" href="mailto:bhoomika1692@gmail.com" target="_blank">
               <Email style={{ fontSize: 40 }} />
             </IconButton>
             <Typography variant="body1">Email</Typography>
