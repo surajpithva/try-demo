@@ -8,7 +8,7 @@ import Footer from '../../components/footer/footer';
 import { useNavigate } from 'react-router-dom';
 
 const teamMembers = [
-  { name: 'Bhoomi  Suthar', role: 'Founder & CEO', image: CEO },
+  { name: 'Bhoomika  Suthar', role: 'Founder & CEO', image: CEO },
 
 ];
 
