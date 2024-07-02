@@ -1,11 +1,11 @@
-import proOne from "../../assests/productOne.jpeg"
+import proOne from "../../assests/productOne.jpg"
 import proTwo from "../../assests/productTwo.jpeg"
-import proThree from "../../assests/productThree.jpeg"
+import proThree from "../../assests/productThree.jpg"
 import proFive from "../../assests/productFive.jpeg"
 import proFour from "../../assests/proFour.jpeg"
 import proSix from "../../assests/proSix.jpeg"
 import proSeven from "../../assests/proSeven.jpeg"
-import proEight from "../../assests/proEight.jpeg"
+import proEight from "../../assests/proEight.jpg"
 
 
 

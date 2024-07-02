@@ -1,4 +1,4 @@
-import { Box, Button, Grid, IconButton, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, CardMedia, Grid, IconButton, Typography } from "@mui/material";
 import React from "react";
 import "./home.css";
 import cuteGirl from "../../assests/cuteGirl.png";
@@ -98,48 +98,31 @@ const Home = () => {
          {/* My Services Start Here */}
          <Box my={4}>
       <Typography variant="h3" textAlign="center" gutterBottom>
-        Services
+        Trending Products
       </Typography>
-      {products.map((product, index) => (
-        <Grid
-          container
-          spacing={4}
-          key={product.id}
-          alignItems="center"
-          className="service-item"
-          my={2}
-        >
-          {index % 2 === 0 ? (
-            <>
-              <Grid item xs={12} md={6}>
-                <img src={product.image} alt={product.title} className="service-image" />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Typography variant="h4" gutterBottom className="text-shadow-black">
-                  {product.title}
+      <Grid container spacing={4} justifyContent="center">
+        {products.map((product) => (
+          <Grid item xs={12} sm={6} md={4} key={product.id}>
+            <Card className="premium-card">
+              <CardMedia
+                component="img"
+                height="140"
+                image={product.image}
+                alt={product.name}
+                className="product-image"
+              />
+              <CardContent>
+                <Typography variant="h5" gutterBottom>
+                  {product.name}
                 </Typography>
-                <Typography variant="h5" className="service-description">
+                <Typography variant="body2" color="text.secondary">
                   {product.description}
                 </Typography>
-              </Grid>
-            </>
-          ) : (
-            <>
-              <Grid item xs={12} md={6}>
-                <Typography variant="h3" gutterBottom className="text-shadow-black">
-                  {product.title}
-                </Typography>
-                <Typography variant="h4" className="service-description">
-                  {product.description}
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <img src={product.image} alt={product.title} className="service-image" />
-              </Grid>
-            </>
-          )}
-        </Grid>
-      ))}
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
       {/* My Services End Here */}
       </div>

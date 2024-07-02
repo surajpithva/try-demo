@@ -1,39 +1,72 @@
 .about-us {
-    font-family: 'Roboto', sans-serif;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  color: white;
+  padding: 100px 20px;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.story-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.story-image:hover {
+  transform: scale(1.05);
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.team-avatar {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.cta-section {
+  background: #f5f5f5;
+  padding: 50px 20px;
+  border-radius: 8px;
+}
+
+.cta-section button {
+  margin-top: 20px;
+  background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+  color: white;
+}
+
+@media (max-width: 600px) {
   .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('path_to_hero_image') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 100px 20px;
-  }
-  
-  .story-image {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .team-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .team-avatar {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-  }
-  
-  .cta-section {
-    background: #f5f5f5;
     padding: 50px 20px;
-    border-radius: 8px;
   }
-  
-  .cta-section button {
+
+  .story-image {
     margin-top: 20px;
   }
-  
+
+  .cta-section {
+    padding: 30px 20px;
+  }
+}

@@ -8,7 +8,7 @@ const Footer = () => {
     <Box component="footer" className="footer mt-3">
       <Grid container spacing={3} justifyContent="center" className="footer-grid">
         <Grid item xs={12} sm={4} className="footer-column">
-          <Typography variant="h5" gutterBottom>Quick Links</Typography>
+          <Typography variant="h4" gutterBottom>Quick Links</Typography>
           <List className="footer-list">
             <ListItem><ListItemText primary="Home" className='text-center' /></ListItem>
             <ListItem><ListItemText primary="About Us" className='text-center' /></ListItem>
@@ -17,21 +17,21 @@ const Footer = () => {
           </List>
         </Grid>
         <Grid item xs={12} sm={4} className="footer-column">
-          <Typography variant="h5" className='text-center' gutterBottom>Contact</Typography>
-          <List className="">
+          <Typography variant="h4"  gutterBottom>Contact</Typography>
+          <List className="footer-list">
             <ListItem>
-              <Phone /><ListItemText className='mx-2 ' primary="+91 81602 39340" />
+              <ListItemText className='mx-2 text-center' primary="+91 81602 39340" />
             </ListItem>
             <ListItem>
-              <Email  /><ListItemText className='mx-2 ' primary="bhoomika1692@gmail.com" />
+              <ListItemText className='mx-2 text-center ' primary="bhoomika1692@gmail.com" />
             </ListItem>
           </List>
         </Grid>
         <Grid item xs={12} sm={4} className="footer-column">
-          <Typography variant="h5"  gutterBottom>Address</Typography>
+          <Typography variant="h4"  gutterBottom>Address</Typography>
           <List className="footer-list">
             <ListItem>
-              <Home /><ListItemText className='mx-2 text-center' primary="A-1203 Elite Ornate
+              <ListItemText className='mx-2 text-center' primary="A-1203 Elite Ornate
 Tragad Rd, Godrej Garden City, Chandkheda, Ahmedabad, Gujarat 382470" />
             </ListItem>
           </List>

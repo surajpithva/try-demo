@@ -70,3 +70,26 @@
   font-weight: 400;
   font-style: normal;
 }
+
+
+/* Services Start Here */
+.premium-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.premium-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .premium-card {
+    margin-bottom: 20px;
+  }
+}
+/* End here */

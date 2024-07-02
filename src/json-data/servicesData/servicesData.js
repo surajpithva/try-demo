@@ -1,11 +1,8 @@
-import serviceOne from "../../assests/servicesOne.png"
-import serviceTwo from "../../assests/servicesTwo.png"
-import serviceThree from "../../assests/servicesThree.png"
-import serviceFour from "../../assests/servicesFour.png"
 
-import productOne from "../../assests/productOne.jpeg"
+
+import productOne from "../../assests/productOne.jpg"
 import productTwo from "../../assests/productTwo.jpeg"
-import productThree from "../../assests/productThree.jpeg"
+import productThree from "../../assests/productThree.jpg"
 import productFive from "../../assests/productFive.jpeg"
 
 

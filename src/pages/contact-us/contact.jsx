@@ -62,13 +62,7 @@ const ContactUsPage = () => {
             <img src={logo} alt="Logo" className="Contact-logo" />
 
             {/* Contact Details */}
-            <Typography variant="h6" className="contact-detail">
-              <Email /> bhoomika1692@gmail.com
-            </Typography>
-            <Typography variant="h6" className="contact-detail">
-              <Room /> A-1203 Elite Ornate Tragad Rd, Godrej Garden City,
-              Chandkheda, Ahmedabad, Gujarat 382470
-            </Typography>
+           
 
             {/* Social Media Icons */}
             {/* <Box mt={2}>
