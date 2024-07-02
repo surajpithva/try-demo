@@ -24,7 +24,7 @@ const AboutUs = () => {
       <Box py={8}>
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={6}>
-            <img src="path_to_story_image" alt="Our Story" className="story-image" />
+            <img src={owner} alt="Our Story" className="story-image" />
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="h4" gutterBottom>
