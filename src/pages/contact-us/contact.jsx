@@ -7,7 +7,6 @@ import {
   Button,
   Box,
 } from "@mui/material";
-import { Email, Room, Instagram, Facebook } from "@mui/icons-material";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import logo from "../../assests/logo.jpeg";
@@ -115,12 +114,7 @@ const ContactUsPage = () => {
             {/* Logo */}
             <img src={logo} alt="Logo" className="Contact-logo" />
 
-            {/* Contact Details */}
-            {/* Social Media Icons */}
-            {/* <Box mt={2}>
-              <Instagram className="social-icon" />
-              <Facebook className="social-icon" />
-            </Box> */}
+            
           </Grid>
         </Grid>
       </Container>
