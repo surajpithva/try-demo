@@ -21,7 +21,7 @@ const ActionAreaCard = ({ image, name, description }) => {
   return (
     <>
       <Card sx={{ maxWidth: 400 }} className='container mt-5'>
-        <CardActionArea onMouseEnter={handleOpen}>
+        <CardActionArea onClick={handleOpen}>
           <CardMedia
             component="img"
             height="140"

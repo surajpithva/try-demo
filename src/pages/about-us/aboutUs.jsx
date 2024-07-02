@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 import './aboutUs.css';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
+import { useNavigate } from 'react-router-dom';
 
 const teamMembers = [
   { name: 'Bhoomi  Suthar', role: 'Founder & CEO', image: CEO },
@@ -19,6 +20,11 @@ const GradientTypography = styled(Typography)({
 });
 
 const AboutUs = () => {
+
+  const navigate = useNavigate()
+  const handlePage = ()=>{
+    navigate("/contactus")
+  }
   return (
     <>
     <Header/>
@@ -79,7 +85,8 @@ const AboutUs = () => {
         <Typography variant="body1" paragraph>
           We are always looking for passionate individuals to join our team. If you love handmade crafts as much as we do, reach out to us!
         </Typography>
-        <Button variant="contained" color="primary" className="cta-button">
+        
+        <Button variant="contained" color="primary" className="cta-button" onClick={handlePage}>
           Contact Us
         </Button>
       </Box>
