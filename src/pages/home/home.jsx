@@ -117,7 +117,7 @@ const Home = () => {
           <Grid item xs={3} sm={2} md={2} textAlign="center">
             <IconButton
               color="primary"
-              href="https://wa.me/yourwhatsapplink"
+              href="https://wa.me/+919714449665"
               target="_blank"
               data-aos="fade-up"
             >
