@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Box,
   Grid,
@@ -8,11 +8,16 @@ import {
   ListItemText,
   Divider,
 } from "@mui/material";
-import { Email, Phone, Home } from "@mui/icons-material";
-import "./footer.css";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import "./footer.css";
 
 const Footer = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <Box component="footer" className="footer mt-3">
       <Grid
@@ -21,34 +26,34 @@ const Footer = () => {
         justifyContent="center"
         className="footer-grid"
       >
-        <Grid item xs={12} sm={4} className="footer-column">
+        <Grid item xs={12} sm={4} className="footer-column" data-aos="fade-up">
           <Typography variant="h4" gutterBottom>
             Quick Links
           </Typography>
           <List className="footer-list">
-            <Link to="/">
+            <Link to="/" className="footer-link">
               <ListItem>
                 <ListItemText primary="Home" className="text-center" />
               </ListItem>
             </Link>
-            <Link to="/aboutus">
+            <Link to="/aboutus" className="footer-link">
               <ListItem>
                 <ListItemText primary="About Us" className="text-center" />
               </ListItem>
             </Link>
-            <Link to="/contactus">
+            <Link to="/contactus" className="footer-link">
               <ListItem>
                 <ListItemText primary="Contact Us" className="text-center" />
               </ListItem>
             </Link>
-            <Link to="/products">
+            <Link to="/products" className="footer-link">
               <ListItem>
                 <ListItemText primary="Products" className="text-center" />
               </ListItem>
             </Link>
           </List>
         </Grid>
-        <Grid item xs={12} sm={4} className="footer-column">
+        <Grid item xs={12} sm={4} className="footer-column" data-aos="fade-up">
           <Typography variant="h4" gutterBottom>
             Contact
           </Typography>
@@ -67,7 +72,7 @@ const Footer = () => {
             </ListItem>
           </List>
         </Grid>
-        <Grid item xs={12} sm={4} className="footer-column">
+        <Grid item xs={12} sm={4} className="footer-column" data-aos="fade-up">
           <Typography variant="h4" gutterBottom>
             Address
           </Typography>

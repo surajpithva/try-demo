@@ -1,97 +1,148 @@
-import React from 'react';
-import CEO from "../../assests/CEO.jpeg";
-import { Container, Box, Typography, Grid, Card, CardContent, Avatar, Button } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import './aboutUs.css';
-import Header from '../../components/header/header';
-import Footer from '../../components/footer/footer';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from "react";
+import CEO from "../../assests/BhoomiBhabhiCEO.jpeg";
+import {
+  Container,
+  Box,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  Avatar,
+  Button,
+} from "@mui/material";
+import { styled } from "@mui/material/styles";
+import "./aboutUs.css";
+import Header from "../../components/header/header";
+import Footer from "../../components/footer/footer";
+import { useNavigate } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const teamMembers = [
-  { name: 'Bhoomika  Suthar', role: 'Founder & CEO', image: CEO },
-
+  { name: "Bhoomika Suthar", role: "Founder & CEO", image: CEO },
 ];
 
 const GradientTypography = styled(Typography)({
-  background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  fontWeight: 'bold',
+  background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  fontWeight: "bold",
 });
 
 const AboutUs = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
 
-  const navigate = useNavigate()
-  const handlePage = ()=>{
-    navigate("/contactus")
-  }
+  const navigate = useNavigate();
+
+  const handlePage = () => {
+    navigate("/contactus");
+  };
+
   return (
     <>
-    <Header/>
-    <Container maxWidth="lg" className="about-us">
-      <Box className="hero-section" py={8} textAlign="center">
-        <GradientTypography variant="h2" gutterBottom>
-          About Us
-        </GradientTypography>
-        <Typography variant="h5">
-          Discover the story behind our handmade crafts
-        </Typography>
-      </Box>
+      <Header />
+      <Container maxWidth="lg" className="about-us">
+        <Box className="hero-section" py={8} textAlign="center">
+          <GradientTypography variant="h2" gutterBottom>
+            About Us
+          </GradientTypography>
+          <Typography variant="h5">
+            Discover the story behind our handmade crafts
+          </Typography>
+        </Box>
 
-      <Box py={8}>
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={6}>
-            <img src={CEO} alt="Our Story" className="story-image" />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <GradientTypography variant="h4" gutterBottom>
-              Our Story
-            </GradientTypography>
-            <Typography variant="h5" className='our-story' paragraph>
-              At Handmade Crafts, we believe in the beauty of unique, handcrafted items. Our journey started with a passion for creating beautiful, artisanal products that bring joy to our customers. Each piece is crafted with care, attention to detail, and a touch of love.
-            </Typography>
-            <Typography className='our-story' variant="h5">
-              From humble beginnings to a thriving business, our dedication to quality and craftsmanship has never wavered. Join us on our journey and discover the magic of handmade crafts.
-            </Typography>
-          </Grid>
-        </Grid>
-      </Box>
-
-      <Box py={8} textAlign="center">
-        <GradientTypography variant="h4" gutterBottom>
-          Meet the Team
-        </GradientTypography>
-        <Grid container spacing={4} justifyContent="center">
-          {teamMembers.map((member) => (
-            <Grid item xs={12} sm={6} md={4} key={member.name}>
-              <Card className="team-card">
-                <Avatar src={member.image} alt={member.name} className="team-avatar" />
-                <CardContent>
-                  <GradientTypography variant="h6">{member.name}</GradientTypography>
-                  <Typography variant="subtitle1" color="textSecondary">
-                    {member.role}
-                  </Typography>
-                </CardContent>
-              </Card>
+        <Box py={8}>
+          <Grid container spacing={4} alignItems="center">
+            <Grid item xs={12} md={6}>
+              <img
+                src={CEO}
+                alt="Our Story"
+                className="story-image"
+                data-aos="fade-right"
+              />
             </Grid>
-          ))}
-        </Grid>
-      </Box>
+            <Grid item xs={12} md={6}>
+              <GradientTypography variant="h4" gutterBottom>
+                Our Story
+              </GradientTypography>
+              <Typography
+                variant="h5"
+                data-aos="fade-left"
+                className="our-story"
+                paragraph
+              >
+                At Handmade Crafts, we believe in the beauty of unique,
+                handcrafted items. Our journey started with a passion for
+                creating beautiful, artisanal products that bring joy to our
+                customers. Each piece is crafted with care, attention to detail,
+                and a touch of love.
+              </Typography>
+              <Typography
+                data-aos="fade-left"
+                className="our-story"
+                variant="h5"
+              >
+                From humble beginnings to a thriving business, our dedication to
+                quality and craftsmanship has never wavered. Join us on our
+                journey and discover the magic of handmade crafts.
+              </Typography>
+            </Grid>
+          </Grid>
+        </Box>
 
-      <Box py={8} textAlign="center" className="cta-section">
-        <GradientTypography variant="h4" gutterBottom>
-          Join Us on Our Journey
-        </GradientTypography>
-        <Typography variant="body1" paragraph>
-          We are always looking for passionate individuals to join our team. If you love handmade crafts as much as we do, reach out to us!
-        </Typography>
-        
-        <Button variant="contained" color="primary" className="cta-button" onClick={handlePage}>
-          Contact Us
-        </Button>
-      </Box>
-    </Container>
-    <Footer/>
+        <Box py={8} textAlign="center">
+          <GradientTypography variant="h4" gutterBottom>
+            Meet the Team
+          </GradientTypography>
+          <Grid container spacing={4} justifyContent="center">
+            {teamMembers.map((member) => (
+              <Grid item xs={12} sm={6} md={4} key={member.name}>
+                <Card className="team-card" data-aos="fade-up">
+                  <Avatar
+                    src={member.image}
+                    alt={member.name}
+                    className="team-avatar"
+                  />
+                  <CardContent>
+                    <GradientTypography variant="h6">
+                      {member.name}
+                    </GradientTypography>
+                    <Typography variant="subtitle1" color="textSecondary">
+                      {member.role}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+        <Box py={8} textAlign="center" className="cta-section">
+          <GradientTypography variant="h4" gutterBottom>
+            Join Us on Our Journey
+          </GradientTypography>
+          <Typography variant="body1" paragraph>
+            We are always looking for passionate individuals to join our team.
+            If you love handmade crafts as much as we do, reach out to us!
+          </Typography>
+
+          <Button
+            variant="contained"
+            color="primary"
+            className="cta-button"
+            onClick={handlePage}
+          >
+            Contact Us
+          </Button>
+        </Box>
+      </Container>
+      <Footer />
     </>
   );
 };

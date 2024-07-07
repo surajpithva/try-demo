@@ -16,27 +16,31 @@
     text-align: center !important;
 }
 
-.footer-column .MuiTypography-h6 {
+.footer-column .MuiTypography-h4 {
     color: #fff;
 }
 
 .footer-list {
-    width: 100%; 
+    width: 100%;
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
 }
 
 .footer-list .MuiListItem-root {
-    justify-content: center ; 
+    justify-content: center;
 }
 
-.footer-list .MuiListItem-root :hover {
-color: rgb(157, 212, 232);
-cursor: pointer;
+.footer-list .MuiListItem-root:hover {
+    color: rgb(157, 212, 232);
+    cursor: pointer;
 }
 
 .footer-list .MuiListItemText-primary {
     color: #aaa;
+}
+
+.footer-link {
+    text-decoration: none;
 }
 
 .footer-divider {
@@ -46,7 +50,7 @@ cursor: pointer;
 
 .footer-bottom {
     padding: 10px 0;
-    text-align: center; 
+    text-align: center;
 }
 
 .footer-bottom .MuiTypography-body2 {

@@ -1,18 +1,38 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, Card, CardContent, CardMedia, Grid, IconButton, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Grid,
+  IconButton,
+  Typography,
+} from "@mui/material";
 import { ClipLoader } from "react-spinners";
 import cuteGirl from "../../assests/cuteGirl.png";
+import homePage from "../../assests/HandMadeHomePage.jpg";
+
 import Header from "../../components/header/header";
 import { Email, Facebook, Instagram, WhatsApp } from "@mui/icons-material";
 import products from "../../json-data/servicesData/servicesData";
 import Testimonials from "../../components/testimonial/testimonial";
 import Footer from "../../components/footer/footer";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "./home.css";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Initialize AOS
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+
     // Simulate loading time
     const timer = setTimeout(() => {
       setLoading(false);
@@ -46,6 +66,7 @@ const Home = () => {
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
+          data-aos="fade-right"
         >
           <Typography
             variant="h1" // Adjust the variant to increase text size
@@ -69,17 +90,22 @@ const Home = () => {
             </Button>
           </Box>
         </Grid>
-        <Grid item sm={12} md={6} lg={6}>
-          <img src={cuteGirl} alt="cutegirl" className="cute-girl-img" />
+        <Grid item sm={12} md={6} lg={6} data-aos="fade-left">
+          <img src={homePage} alt="cutegirl" className="cute-girl-img mt-5" />
         </Grid>
       </Grid>
-      <Typography className="better-day-text" variant="h3" textAlign={"center"}>
+      <Typography
+        className="better-day-text"
+        variant="h3"
+        textAlign={"center"}
+        data-aos="zoom-in"
+      >
         We Are Gonna Make Your Day Better
       </Typography>
       {/* Classy Craft End Here */}
 
       {/* Order Now Start Here */}
-      <div className="order-start">
+      <div className="order-start" data-aos="fade-up">
         <Typography variant="h3" className="order-now" textAlign="center">
           Order Now
         </Typography>
@@ -89,60 +115,96 @@ const Home = () => {
 
         <Grid container spacing={2} justifyContent="center" alignItems="center">
           <Grid item xs={3} sm={2} md={2} textAlign="center">
-            <IconButton color="primary" href="https://wa.me/yourwhatsapplink" target="_blank">
+            <IconButton
+              color="primary"
+              href="https://wa.me/yourwhatsapplink"
+              target="_blank"
+              data-aos="fade-up"
+            >
               <WhatsApp style={{ fontSize: 40 }} />
             </IconButton>
             <Typography variant="body1">WhatsApp</Typography>
           </Grid>
           <Grid item xs={3} sm={2} md={2} textAlign="center">
-            <IconButton color="primary" href="https://www.facebook.com/handmade.bhumi?mibextid=ZbWKwL" target="_blank">
+            <IconButton
+              color="primary"
+              href="https://www.facebook.com/handmade.bhumi?mibextid=ZbWKwL"
+              target="_blank"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <Facebook style={{ fontSize: 40 }} />
             </IconButton>
             <Typography variant="body1">Facebook</Typography>
           </Grid>
           <Grid item xs={3} sm={2} md={2} textAlign="center">
-            <IconButton color="primary" href="mailto:bhoomika1692@gmail.com" target="_blank">
+            <IconButton
+              color="primary"
+              href="mailto:bhoomika1692@gmail.com"
+              target="_blank"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <Email style={{ fontSize: 40 }} />
             </IconButton>
             <Typography variant="body1">Email</Typography>
           </Grid>
           <Grid item xs={3} sm={2} md={2} textAlign="center">
-            <IconButton color="primary" href="https://instagram.com/handmade_by_bhumi/?igsh=MWZ6d2R3NzZmanN5Yw%3D%3D" target="_blank">
+            <IconButton
+              color="primary"
+              href="https://instagram.com/handmade_by_bhumi/?igsh=MWZ6d2R3NzZmanN5Yw%3D%3D"
+              target="_blank"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <Instagram style={{ fontSize: 40 }} />
             </IconButton>
             <Typography variant="body1">Instagram</Typography>
           </Grid>
         </Grid>
-         {/* My Services Start Here */}
-         <Box my={4}>
-      <Typography variant="h3" textAlign="center" gutterBottom>
-        Trending Products
-      </Typography>
-      <Grid container spacing={4} justifyContent="center">
-        {products.map((product) => (
-          <Grid item xs={12} sm={6} md={4} key={product.id}>
-            <Card className="premium-card">
-              <CardMedia
-                component="img"
-                height="140"
-                image={product.image}
-                alt={product.name}
-                className="product-image"
-              />
-              <CardContent>
-                <Typography variant="h5" gutterBottom>
-                  {product.name}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {product.description}
-                </Typography>
-              </CardContent>
-            </Card>
+        {/* My Services Start Here */}
+        <Box my={4}>
+          <Typography
+            variant="h3"
+            textAlign="center"
+            gutterBottom
+            data-aos="fade-up"
+          >
+            Trending Products
+          </Typography>
+          <Grid container spacing={4} justifyContent="center">
+            {products.map((product) => (
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                key={product.id}
+                data-aos="fade-up"
+                data-aos-delay={100 * product.id}
+              >
+                <Card className="premium-card">
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image={product.image}
+                    alt={product.name}
+                    className="product-image"
+                  />
+                  <CardContent>
+                    <Typography variant="h5" gutterBottom>
+                      {product.name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {product.description}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
-    </Box>
-      {/* My Services End Here */}
+        </Box>
+        {/* My Services End Here */}
       </div>
       {/* Order Now End Here */}
 
