@@ -5,6 +5,7 @@ import {
   Card,
   CardContent,
   CardMedia,
+  Container,
   Grid,
   IconButton,
   Typography,
@@ -95,7 +96,7 @@ const Home = () => {
         </Grid>
       </Grid>
       <Typography
-        className="better-day-text"
+        className="better-day-text my-3"
         variant="h3"
         textAlign={"center"}
         data-aos="zoom-in"
@@ -163,7 +164,9 @@ const Home = () => {
           </Grid>
         </Grid>
         {/* My Services Start Here */}
-        <Box my={4}>
+        <Container maxWidth="lg">
+          {" "}
+          {/* Adjust maxWidth as needed */}
           <Typography
             variant="h3"
             textAlign="center"
@@ -172,38 +175,42 @@ const Home = () => {
           >
             Trending Products
           </Typography>
-          <Grid container spacing={4} justifyContent="center">
+          <Grid container spacing={4}>
             {products.map((product) => (
               <Grid
                 item
                 xs={12}
-                sm={6}
-                md={4}
                 key={product.id}
                 data-aos="fade-up"
                 data-aos-delay={100 * product.id}
               >
                 <Card className="premium-card">
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={product.image}
-                    alt={product.name}
-                    className="product-image"
-                  />
-                  <CardContent>
-                    <Typography variant="h5" gutterBottom>
-                      {product.name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {product.description}
-                    </Typography>
-                  </CardContent>
+                  <Grid container spacing={2}>
+                    <Grid item xs={4}>
+                      <CardMedia
+                        component="img"
+                        height="140"
+                        image={product.image}
+                        alt={product.name}
+                        className="product-image"
+                      />
+                    </Grid>
+                    <Grid item xs={8}>
+                      <CardContent>
+                        <Typography variant="h5" gutterBottom>
+                          {product.name}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {product.description}
+                        </Typography>
+                      </CardContent>
+                    </Grid>
+                  </Grid>
                 </Card>
               </Grid>
             ))}
           </Grid>
-        </Box>
+        </Container>
         {/* My Services End Here */}
       </div>
       {/* Order Now End Here */}

@@ -1,4 +1,23 @@
-.Contact-logo{
-height: auto;
-width: 100%;
+.Contact-logo {
+    height: auto;
+    width: 100%;
+}
+
+.contact-container {
+    padding: 20px;
+}
+
+.contact-heading {
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .contact-info {
+        margin-top: 20px;
+    }
 }

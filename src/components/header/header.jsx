@@ -1,19 +1,19 @@
-import React from 'react';
-import "./header.css"
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+import React from "react";
+import "./header.css";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
 import logo from "../../assests/logo.jpeg";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-const pages = ['Home', 'Products', 'About Us', 'Contact Us'];
+const pages = ["Home", "Products", "About Us", "Contact Us"];
 
 const Header = () => {
   const navigate = useNavigate();
@@ -38,35 +38,41 @@ const Header = () => {
 
   const handlePageNavigation = (page) => {
     handleCloseNavMenu();
-    const pagePath = page === 'Home' ? '/' : `/${page.toLowerCase().replace(/\s+/g, '')}`;
+    const pagePath =
+      page === "Home" ? "/" : `/${page.toLowerCase().replace(/\s+/g, "")}`;
     navigate(pagePath);
   };
 
   return (
-    <AppBar position="static" className='bhoomiCraftsNavbar' >
+    <AppBar position="static" className="bhoomiCraftsNavbar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src={logo} alt="logo" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} className='logoImg' />
+          <img
+            src={logo}
+            alt="logo"
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+            className="logoImg"
+          />
           <Typography
-            className='mx-2'
+            className="mx-2"
             variant="h6"
             noWrap
             component="a"
             href="/"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              display: { xs: "none", md: "flex" },
+              fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
             }}
           >
-            HandMade_By_Bhoomi
+            HandMade_By_Bhumi
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -81,18 +87,18 @@ const Header = () => {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: "block", md: "none" },
               }}
             >
               {pages.map((page) => (
@@ -103,13 +109,18 @@ const Header = () => {
             </Menu>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
-                className='Text'
+                className="Text"
                 key={page}
                 onClick={() => handlePageNavigation(page)}
-                sx={{ my: 3, color: 'white', display: 'block', textDecorationLine: "underline" }}
+                sx={{
+                  my: 3,
+                  color: "white",
+                  display: "block",
+                  textDecorationLine: "underline",
+                }}
               >
                 {page}
               </Button>

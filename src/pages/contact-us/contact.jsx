@@ -1,17 +1,11 @@
-import React, { useState } from "react";
-import {
-  Container,
-  Grid,
-  Typography,
-  TextField,
-  Button,
-  Box,
-} from "@mui/material";
+import React, { useState, useEffect } from "react";
+import { Container, Grid, Typography, TextField, Button } from "@mui/material";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import logo from "../../assests/logo.jpeg";
 import "./contact.css";
 import Swal from "sweetalert2";
+import Aos from "aos";
 
 const ContactUsPage = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +13,10 @@ const ContactUsPage = () => {
     email: "",
     message: "",
   });
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
 
   const handleFormSubmit = () => {
     // Basic validation
@@ -57,16 +55,11 @@ const ContactUsPage = () => {
 
   return (
     <>
-      <Header  />
-      <Container className="contact-container ">
-        <Grid
-          container
-          spacing={3}
-          justifyContent="center"
-          alignItems="center"
-        >
+      <Header />
+      <Container className="contact-container">
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
           {/* Left Side Content */}
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} data-aos="fade-right">
             <Typography variant="h4" className="contact-heading">
               Contact Us
             </Typography>
@@ -110,11 +103,15 @@ const ContactUsPage = () => {
           </Grid>
 
           {/* Right Side Content */}
-          <Grid item xs={12} md={6} className="contact-info mt-5">
+          <Grid
+            item
+            xs={12}
+            md={6}
+            className="contact-info"
+            data-aos="fade-left"
+          >
             {/* Logo */}
             <img src={logo} alt="Logo" className="Contact-logo" />
-
-            
           </Grid>
         </Grid>
       </Container>
