@@ -72,3 +72,7 @@
     color: rgb(141, 213, 222);
     font-size: large;
 }
+.address-link {
+    text-decoration: none;
+    color: inherit;
+  }

@@ -6,6 +6,8 @@ import divyaClient from "../../assests/divyaClient.jpeg"
 import khushiClient from "../../assests/khushiClient.jpeg"
 import muskanClient from "../../assests/muskanClient.jpeg"
 import sharddhaClient from "../../assests/sharddhaClient.jpeg"
+import HetviClient from "../../assests/hetvi seth .jpg"
+
 
 
 
@@ -28,8 +30,8 @@ const testimonials = [
       message: "The craft pieces are not only beautiful but also very durable. Highly recommended for anyone looking for quality art."
     },
     {
-      imgSrc: surajClient,
-      name: "Suraj Pithva",
+      imgSrc: HetviClient,
+      name: "Hetvi Shah",
       message: "The quality of the handmade crafts is exceptional. Each piece is unique and beautifully crafted."
     },
     {

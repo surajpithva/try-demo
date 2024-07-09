@@ -33,7 +33,7 @@ const Footer = () => {
           <List className="footer-list">
             <Link to="/" className="footer-link">
               <ListItem>
-                <ListItemText  primary="Home" className="text-center" />
+                <ListItemText primary="Home" className="text-center" />
               </ListItem>
             </Link>
             <Link to="/aboutus" className="footer-link">
@@ -66,7 +66,7 @@ const Footer = () => {
             </ListItem>
             <ListItem>
               <ListItemText
-                className="mx-2 text-center "
+                className="mx-2 text-center"
                 primary="bhoomika1692@gmail.com"
               />
             </ListItem>
@@ -80,8 +80,20 @@ const Footer = () => {
             <ListItem>
               <ListItemText
                 className="mx-2 text-center"
-                primary="A-1203 Elite Ornate
-Tragad Rd, Godrej Garden City, Chandkheda, Ahmedabad, Gujarat 382470"
+                primary={
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=A-1203+Elite+Ornate+Tragad+Rd,+Godrej+Garden+City,+Chandkheda,+Ahmedabad,+Gujarat+382470"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="address-link"
+                  >
+                    A-1203 Elite Ornate
+                    
+                    Tragad Rd, Godrej Garden City, Chandkheda,
+                    
+                    Ahmedabad, Gujarat 382470
+                  </a>
+                }
               />
             </ListItem>
           </List>
