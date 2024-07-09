@@ -80,26 +80,31 @@
 
 
 /* Services Start Here */
-.premium-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.product-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-.premium-card:hover {
+.product-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .product-image {
-  border-radius: 4px;
+  object-fit:contain;
+  border-bottom: 2px solid #eee;
 }
 
-@media (max-width: 900px) {
-  .premium-card {
-    margin-bottom: 20px;
-  }
+.product-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem; 
 }
 
+.product-description {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem; /* Increased font size */
+}
 
 /* End here */
 

@@ -118,7 +118,7 @@ const Home = () => {
           <Grid item xs={3} sm={2} md={2} textAlign="center">
             <IconButton
               color="primary"
-              href="https://wa.me/+919714449665"
+              href="https://wa.me/+918160239340"
               target="_blank"
               data-aos="fade-up"
             >
@@ -165,51 +165,34 @@ const Home = () => {
         </Grid>
         {/* My Services Start Here */}
         <Container maxWidth="lg">
-          {" "}
-          {/* Adjust maxWidth as needed */}
-          <Typography
-            variant="h3"
-            textAlign="center"
-            gutterBottom
-            data-aos="fade-up"
-          >
-            Trending Products
-          </Typography>
-          <Grid container spacing={4}>
-            {products.map((product) => (
-              <Grid
-                item
-                xs={12}
-                key={product.id}
-                data-aos="fade-up"
-                data-aos-delay={100 * product.id}
-              >
-                <Card className="premium-card">
-                  <Grid container spacing={2}>
-                    <Grid item xs={4}>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={product.image}
-                        alt={product.name}
-                        className="product-image"
-                      />
-                    </Grid>
-                    <Grid item xs={8}>
-                      <CardContent>
-                        <Typography variant="h5" gutterBottom>
-                          {product.name}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          {product.description}
-                        </Typography>
-                      </CardContent>
-                    </Grid>
-                  </Grid>
-                </Card>
-              </Grid>
-            ))}
+        <Box sx={{ flexGrow: 1, padding: '2rem', backgroundColor: '#f9f9f9' }}>
+      <Typography variant="h3" align="center" gutterBottom>
+        Trending Products
+      </Typography>
+      <Grid container spacing={4}>
+        {products.map((product) => (
+          <Grid item xs={12} sm={6} md={4} key={product.id}>
+            <Card className="product-card">
+              <CardMedia
+                component="img"
+                height="250"
+                image={product.image}
+                alt={product.title}
+                className="product-image"
+              />
+              <CardContent>
+                <Typography className="product-title" gutterBottom variant="h5" component="div">
+                  {product.title}
+                </Typography>
+                <Typography className="product-description" variant="body2" color="text.secondary">
+                  {product.description}
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
+        ))}
+      </Grid>
+    </Box>
         </Container>
         {/* My Services End Here */}
       </div>
