@@ -5,6 +5,7 @@ import productThree from "../../assests/productThree.jpg";
 const products = [
   {
     id: 1,
+    label : "Special Offer",
     image: productOne,
     title: "Rakhi",
     description:
@@ -13,6 +14,7 @@ const products = [
 
   {
     id: 2,
+    label : "Limited Stock",
     image: productThree,
     title: "Wall Art",
     description:
@@ -20,6 +22,7 @@ const products = [
   },
   {
     id: 3,
+    label : "Customizable",
     image: productTwo,
     title: "Custom Tray",
     description:

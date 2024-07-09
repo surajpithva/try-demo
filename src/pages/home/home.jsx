@@ -171,34 +171,35 @@ const Home = () => {
         {/* My Services Start Here */}
         <Container maxWidth="lg">
         <Box sx={{ flexGrow: 1, padding: '2rem', backgroundColor: '#f9f9f9' }}>
-      <Typography variant="h3" align="center" gutterBottom>
-        Trending Products
-      </Typography>
-      <Grid container spacing={4}>
-        {products.map((product) => (
-          <Grid item xs={12} sm={6} md={4} key={product.id}>
-            <Card className="product-card">
-              <CardMedia
-                component="img"
-                height="250"
-                image={product.image}
-                alt={product.title}
-                className="product-image"
-              />
-              <CardContent>
-                <Typography className="product-title" gutterBottom variant="h5" component="div">
-                  {product.title}
-                </Typography>
-                <Typography className="product-description" variant="body2" color="text.secondary">
-                  {product.description}
-                </Typography>
-              </CardContent>
-            </Card>
+          <Typography variant="h3" align="center" gutterBottom>
+            Trending Products
+          </Typography>
+          <Grid container spacing={4}>
+            {products.map((product) => (
+              <Grid item xs={12} sm={6} md={4} key={product.id}>
+                <Card className="product-card">
+                  <div className="label">{product.label}</div>
+                  <CardMedia
+                    component="img"
+                    height="250"
+                    image={product.image}
+                    alt={product.title}
+                    className="product-image"
+                  />
+                  <CardContent>
+                    <Typography className="product-title" gutterBottom variant="h5" component="div">
+                      {product.title}
+                    </Typography>
+                    <Typography className="product-description" variant="body2" color="text.secondary">
+                      {product.description}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
-    </Box>
-        </Container>
+        </Box>
+      </Container>
         {/* My Services End Here */}
       </div>
       {/* Order Now End Here */}

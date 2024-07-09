@@ -81,6 +81,7 @@
 
 /* Services Start Here */
 .product-card {
+  position: relative;
   transition: transform 0.3s, box-shadow 0.3s;
   border-radius: 15px;
   overflow: hidden;
@@ -91,8 +92,23 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #483938;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  z-index: 1;
+  text-transform: uppercase;
+  
+}
+
 .product-image {
-  object-fit:contain;
+  object-fit: cover;
   border-bottom: 2px solid #eee;
 }
 
@@ -103,7 +119,22 @@
 
 .product-description {
   font-family: 'Arial', sans-serif;
-  font-size: 1rem; /* Increased font size */
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .product-title {
+    font-size: 1.5rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
+    padding: 3px 6px;
+  }
 }
 
 /* End here */
