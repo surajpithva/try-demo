@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import {
   Box,
   Button,
@@ -8,6 +8,7 @@ import {
   Container,
   Grid,
   IconButton,
+  Skeleton,
   Typography,
 } from "@mui/material";
 import { ClipLoader } from "react-spinners";
@@ -57,6 +58,7 @@ const Home = () => {
       {/* Header End Here */}
 
       {/* Classy Craft Start Here */}
+      <div>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid
           item
@@ -70,7 +72,7 @@ const Home = () => {
           data-aos="fade-right"
         >
           <Typography
-            variant="h1" // Adjust the variant to increase text size
+            variant="h1"
             className="amita-regular"
             align="center"
             gutterBottom
@@ -78,12 +80,11 @@ const Home = () => {
             Classy Craft
           </Typography>
           <Typography
-            variant="h5" // Adjust the variant to increase text size
+            variant="h5"
             align="center"
             className="description"
           >
-            Your One-Stop-Shop For Unique Handmade Products, Including Hoops
-            Moti Art, Rakhi, Wall Art, Hamper And More
+            Your One-Stop-Shop For Unique Handmade Products, Including Hoops Moti Art, Rakhi, Wall Art, Hamper And More
           </Typography>
           <Box>
             <Button variant="contained" color="secondary" className="mt-4">
@@ -92,9 +93,13 @@ const Home = () => {
           </Box>
         </Grid>
         <Grid item sm={12} md={6} lg={6} data-aos="fade-left">
-          <img src={homePage} alt="cutegirl" className="cute-girl-img mt-5" />
+          <Suspense fallback={<Skeleton variant="rectangular" width="100%" height="auto" />}>
+            <img src={homePage} alt="cutegirl" className="cute-girl-img mt-5" />
+          </Suspense>
         </Grid>
       </Grid>
+      
+    </div>
       <Typography
         className="better-day-text my-3"
         variant="h3"

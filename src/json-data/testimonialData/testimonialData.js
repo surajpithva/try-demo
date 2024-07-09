@@ -44,7 +44,7 @@ const testimonials = [
     },
     {
       imgSrc: divyaClient,
-      name: "Divya Joshi",
+      name: "Divya Panchal",
       message: "The variety of crafts available is fantastic. There's something for every taste and preference."
     }
   ];

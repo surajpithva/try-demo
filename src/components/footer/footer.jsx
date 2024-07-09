@@ -33,7 +33,7 @@ const Footer = () => {
           <List className="footer-list">
             <Link to="/" className="footer-link">
               <ListItem>
-                <ListItemText primary="Home" className="text-center" />
+                <ListItemText  primary="Home" className="text-center" />
               </ListItem>
             </Link>
             <Link to="/aboutus" className="footer-link">
