@@ -13,7 +13,8 @@ import {
 } from "@mui/material";
 import { ClipLoader } from "react-spinners";
 import cuteGirl from "../../assests/cuteGirl.png";
-import homePage from "../../assests/HandMadeHomePage.jpg";
+// import homePage from "../../assests/HandMadeHomePage.jpg";
+import homePage from "../../assests/HandMadeHomePage .jpg"
 
 import Header from "../../components/header/header";
 import { Email, Facebook, Instagram, WhatsApp } from "@mui/icons-material";
@@ -46,7 +47,7 @@ const Home = () => {
   if (loading) {
     return (
       <div className="loader-container">
-        <ClipLoader size={150} color={"#333"} loading={loading} />
+        <ClipLoader size={90} color={"#333"} loading={loading} />
       </div>
     );
   }
@@ -58,7 +59,7 @@ const Home = () => {
       {/* Header End Here */}
 
       {/* Classy Craft Start Here */}
-      <div>
+      <div >
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid
           item

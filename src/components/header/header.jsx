@@ -44,7 +44,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static" className="bhoomiCraftsNavbar">
+    <AppBar position="static" className="bhoomiCraftsNavbar" >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img

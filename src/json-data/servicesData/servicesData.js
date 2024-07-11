@@ -16,7 +16,7 @@ const products = [
     id: 2,
     label : "Limited Stock",
     image: productThree,
-    title: "Wall Art",
+    title: "Necklace",
     description:
       "Transform your walls into a gallery of elegance with our curated collection of Wall Art. Each piece is a masterpiece, meticulously crafted to add character and charm to your living space. From abstract designs that evoke emotion to landscapes that bring tranquility, our Wall Art complements any interior style. Whether you're decorating a cozy home or a modern office, our diverse selection ensures there's something to inspire every aesthetic taste. Explore our gallery and find the perfect piece to enhance your surroundings.",
   },
