@@ -13,7 +13,6 @@ import {
 } from "@mui/material";
 import { ClipLoader } from "react-spinners";
 import cuteGirl from "../../assests/cuteGirl.png";
-// import homePage from "../../assests/HandMadeHomePage.jpg";
 import homePage from "../../assests/HandMadeHomePage .jpg"
 
 import Header from "../../components/header/header";
@@ -24,6 +23,8 @@ import Footer from "../../components/footer/footer";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./home.css";
+
+
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
